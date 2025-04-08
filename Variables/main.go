@@ -22,4 +22,20 @@ func main() {
 	fmt.Println("Student scores")
 	fmt.Println(strings.Repeat("-", 14))
 	fmt.Println(name, score)
+
+	//-----
+	// const
+
+	const a = 10
+	const b string = "hello, world"
+
+	const c = a
+
+	const (
+		d = true
+		e = 3.14
+	)
+
+	fmt.Println(e)
+
 }
