@@ -6,6 +6,7 @@ import (
 )
 
 func main() {
+	fmt.Println("Switch demo")
 
 	type score struct {
 		name  string
@@ -18,9 +19,7 @@ func main() {
 		{name: "Dave", score: 76},
 	}
 
-	fmt.Println("Student scores")
-
-	fmt.Println("Select score to print (1-3)")
+	fmt.Println("Select score to print (1- 3) ")
 	var option string
 	fmt.Scanln(&option)
 
@@ -28,17 +27,18 @@ func main() {
 	fmt.Println(strings.Repeat("-", 14))
 
 	var index int
-	if option == "1" {
+
+	switch option {
+	case "1":
 		index = 0
-	} else if option == "2" {
+	case "2":
 		index = 1
-	} else if option == "3" {
+	case "3":
 		index = 2
-	} else {
-		fmt.Println("Unknow option, defaulting to 1")
-		index = 0
+	default:
+		fmt.Println("Unknown option, defaulting to 1")
+		index = 1
 	}
 
 	fmt.Println(scores[index].name, scores[index].score)
-
 }
